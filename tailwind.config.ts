@@ -4,11 +4,21 @@ import plugin from "tailwindcss/plugin";
 const config: Config = {
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/common/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/assets/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+      },
+      animation: {
+        float: "float 1.5s ease-in-out infinite",
+      },
+
       colors: {
         Main_Blue: "#1B7BE8",
         Dark_Blue: "#0E4E97",
