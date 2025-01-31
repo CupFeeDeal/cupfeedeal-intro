@@ -18,6 +18,7 @@ const Home = () => {
         <Section3 />
         <Section4 />
         <Footer />
+        <div className="h-24" />
       </div>
       <FloatingBtn />
     </>
